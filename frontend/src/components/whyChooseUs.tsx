@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, JSX } from "react";
+import { useState } from "react";
 import { Shield, Truck, Award, Package, Star, Clock } from "lucide-react";
 
 export default function WhyChooseUs() {
