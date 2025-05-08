@@ -1,6 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
-import { use, useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 const ProductPage = () => {
