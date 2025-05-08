@@ -1,5 +1,6 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 interface Product {
   id: string;
@@ -13,48 +14,50 @@ interface Product {
 
 const featuredProducts: Product[] = [
   {
-    id: 'p1',
-    name: 'Heavy Duty Power Cable',
-    category: 'Industrial',
+    id: "p1",
+    name: "Heavy Duty Power Cable",
+    category: "Industrial",
     price: 12500,
     rating: 4.8,
-    imageUrl: '/api/placeholder/400/400',
-    isPopular: true
+    imageUrl: "/api/placeholder/400/400",
+    isPopular: true,
   },
   {
-    id: 'p2',
-    name: 'Flexible Copper Wire',
-    category: 'Residential',
+    id: "p2",
+    name: "Flexible Copper Wire",
+    category: "Residential",
     price: 6800,
     rating: 4.6,
-    imageUrl: '/api/placeholder/400/400'
+    imageUrl: "/api/placeholder/400/400",
   },
   {
-    id: 'p3',
-    name: 'XLPE Insulated Cable',
-    category: 'Industrial',
+    id: "p3",
+    name: "XLPE Insulated Cable",
+    category: "Industrial",
     price: 18500,
     rating: 4.9,
-    imageUrl: '/api/placeholder/400/400',
-    isPopular: true
+    imageUrl: "/api/placeholder/400/400",
+    isPopular: true,
   },
   {
-    id: 'p4',
-    name: 'Fiber Optic Cable',
-    category: 'Telecommunications',
+    id: "p4",
+    name: "Fiber Optic Cable",
+    category: "Telecommunications",
     price: 9200,
     rating: 4.7,
-    imageUrl: '/api/placeholder/400/400'
-  }
+    imageUrl: "/api/placeholder/400/400",
+  },
 ];
 
 const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
   return (
     <div className="group flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
       <div className="relative">
-        <img 
-          src={product.imageUrl} 
-          alt={product.name} 
+        <Image
+        width={200}
+        height={200}
+          src={product.imageUrl}
+          alt={product.name}
           className="w-full h-48 object-cover object-center"
         />
         {product.isPopular && (
@@ -73,11 +76,13 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
         <div className="flex items-center mt-2">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
-              <svg 
+              <svg
                 key={i}
-                className={`w-4 h-4 ${i < Math.floor(product.rating) 
-                  ? 'text-amber-500' 
-                  : 'text-gray-300 dark:text-gray-600'}`}
+                className={`w-4 h-4 ${
+                  i < Math.floor(product.rating)
+                    ? "text-amber-500"
+                    : "text-gray-300 dark:text-gray-600"
+                }`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -113,21 +118,36 @@ const FeaturedProducts: React.FC = () => {
             Featured Products
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Discover our most popular and high-quality electrical wire solutions for all your needs
+            Discover our most popular and high-quality electrical wire solutions
+            for all your needs
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {featuredProducts.map(product => (
+          {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>
-        
+
         <div className="mt-12 text-center">
-          <Link href="/products" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
+          <Link
+            href="/products"
+            className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+          >
             View All Products
-            <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="ml-2 h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
             </svg>
           </Link>
         </div>

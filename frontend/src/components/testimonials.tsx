@@ -1,5 +1,6 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
 
 interface Testimonial {
   id: string;
@@ -13,50 +14,55 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    id: 't1',
-    name: 'Oluwaseun Adebayo',
-    role: 'Project Manager',
-    company: 'Lagos Construction Ltd',
-    content: 'Voltline Wire Company has been our trusted supplier for three consecutive major construction projects. Their industrial-grade cables consistently exceed quality expectations, and their nationwide delivery has never failed to meet our tight schedules.',
-    imageUrl: '/api/placeholder/64/64',
-    rating: 5
+    id: "t1",
+    name: "Oluwaseun Adebayo",
+    role: "Project Manager",
+    company: "Lagos Construction Ltd",
+    content:
+      "Voltline Wire Company has been our trusted supplier for three consecutive major construction projects. Their industrial-grade cables consistently exceed quality expectations, and their nationwide delivery has never failed to meet our tight schedules.",
+    imageUrl: "/api/placeholder/64/64",
+    rating: 5,
   },
   {
-    id: 't2',
-    name: 'Amina Ibrahim',
-    role: 'Electrical Engineer',
-    company: 'PowerSolutions Nigeria',
-    content: 'As an electrical engineer working on critical infrastructure projects, I cannot afford to compromise on quality. Voltline provides the reliability and technical specifications my projects demand, with excellent consultation services.',
-    imageUrl: '/api/placeholder/64/64',
-    rating: 5
+    id: "t2",
+    name: "Amina Ibrahim",
+    role: "Electrical Engineer",
+    company: "PowerSolutions Nigeria",
+    content:
+      "As an electrical engineer working on critical infrastructure projects, I cannot afford to compromise on quality. Voltline provides the reliability and technical specifications my projects demand, with excellent consultation services.",
+    imageUrl: "/api/placeholder/64/64",
+    rating: 5,
   },
   {
-    id: 't3',
-    name: 'Chukwudi Okonkwo',
-    role: 'Operations Director',
-    company: 'Eastern Telecoms',
-    content: 'The fiber optic cables we sourced from Voltline significantly improved our network performance. Their technical team was exceptional in helping us select the right specifications for our expansion in the South-East region.',
-    imageUrl: '/api/placeholder/64/64',
-    rating: 4
+    id: "t3",
+    name: "Chukwudi Okonkwo",
+    role: "Operations Director",
+    company: "Eastern Telecoms",
+    content:
+      "The fiber optic cables we sourced from Voltline significantly improved our network performance. Their technical team was exceptional in helping us select the right specifications for our expansion in the South-East region.",
+    imageUrl: "/api/placeholder/64/64",
+    rating: 4,
   },
   {
-    id: 't4',
-    name: 'Fatima Bello',
-    role: 'Real Estate Developer',
-    company: 'Northstar Properties',
-    content: 'For our residential developments across Northern Nigeria, Voltline has been an invaluable partner. Their commitment to quality and safety gives us confidence in our electrical installations, and their warranty program provides added value to our clients.',
-    imageUrl: '/api/placeholder/64/64',
-    rating: 5
+    id: "t4",
+    name: "Fatima Bello",
+    role: "Real Estate Developer",
+    company: "Northstar Properties",
+    content:
+      "For our residential developments across Northern Nigeria, Voltline has been an invaluable partner. Their commitment to quality and safety gives us confidence in our electrical installations, and their warranty program provides added value to our clients.",
+    imageUrl: "/api/placeholder/64/64",
+    rating: 5,
   },
   {
-    id: 't5',
-    name: 'Emmanuel Okafor',
-    role: 'Procurement Manager',
-    company: 'Delta Industrial Group',
-    content: "Voltline &apos; s ability to deliver large orders with consistent quality to our facilities in the Niger Delta has been impressive. Their customer service is responsive, and they've been flexible with our evolving requirements.",
-    imageUrl: '/api/placeholder/64/64',
-    rating: 5
-  }
+    id: "t5",
+    name: "Emmanuel Okafor",
+    role: "Procurement Manager",
+    company: "Delta Industrial Group",
+    content:
+      "Voltline &apos; s ability to deliver large orders with consistent quality to our facilities in the Niger Delta has been impressive. Their customer service is responsive, and they've been flexible with our evolving requirements.",
+    imageUrl: "/api/placeholder/64/64",
+    rating: 5,
+  },
 ];
 
 const Testimonials: React.FC = () => {
@@ -67,7 +73,9 @@ const Testimonials: React.FC = () => {
   };
 
   const prevTestimonial = () => {
-    setActiveIndex((prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length);
+    setActiveIndex(
+      (prevIndex) => (prevIndex - 1 + testimonials.length) % testimonials.length
+    );
   };
 
   const goToTestimonial = (index: number) => {
@@ -82,7 +90,8 @@ const Testimonials: React.FC = () => {
             What Our Clients Say
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Hear from businesses across Nigeria who trust Voltline for their electrical wiring needs
+            Hear from businesses across Nigeria who trust Voltline for their
+            electrical wiring needs
           </p>
         </div>
 
@@ -95,8 +104,8 @@ const Testimonials: React.FC = () => {
                     key={i}
                     className={`w-5 h-5 ${
                       i < testimonials[activeIndex].rating
-                        ? 'text-amber-500'
-                        : 'text-gray-300 dark:text-gray-600'
+                        ? "text-amber-500"
+                        : "text-gray-300 dark:text-gray-600"
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -116,11 +125,13 @@ const Testimonials: React.FC = () => {
               </svg>
 
               <p className="text-gray-600 dark:text-gray-300 text-lg mb-8">
-                "{testimonials[activeIndex].content}"
+                &ldquo;{testimonials[activeIndex].content}&rdquo;
               </p>
 
               <div className="flex items-center">
-                <img
+                <Image
+                width={200}
+                height={200}
                   src={testimonials[activeIndex].imageUrl}
                   alt={testimonials[activeIndex].name}
                   className="w-16 h-16 rounded-full object-cover border-4 border-blue-100 dark:border-blue-900"
@@ -130,7 +141,8 @@ const Testimonials: React.FC = () => {
                     {testimonials[activeIndex].name}
                   </p>
                   <p className="text-gray-500 dark:text-gray-400">
-                    {testimonials[activeIndex].role}, {testimonials[activeIndex].company}
+                    {testimonials[activeIndex].role},{" "}
+                    {testimonials[activeIndex].company}
                   </p>
                 </div>
               </div>
@@ -186,8 +198,8 @@ const Testimonials: React.FC = () => {
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 mx-1 rounded-full ${
                   activeIndex === index
-                    ? 'bg-blue-600 dark:bg-blue-400'
-                    : 'bg-gray-300 dark:bg-gray-600'
+                    ? "bg-blue-600 dark:bg-blue-400"
+                    : "bg-gray-300 dark:bg-gray-600"
                 }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />
@@ -196,7 +208,7 @@ const Testimonials: React.FC = () => {
         </div>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.slice(0, 3).map((item, index) => (
+          {testimonials.slice(0, 3).map((item) => (
             <div
               key={item.id}
               className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300"
@@ -207,8 +219,8 @@ const Testimonials: React.FC = () => {
                     key={i}
                     className={`w-4 h-4 ${
                       i < item.rating
-                        ? 'text-amber-500'
-                        : 'text-gray-300 dark:text-gray-600'
+                        ? "text-amber-500"
+                        : "text-gray-300 dark:text-gray-600"
                     }`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
@@ -219,11 +231,13 @@ const Testimonials: React.FC = () => {
               </div>
 
               <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-4">
-                "{item.content}"
+                &ldquo;{item.content}&rdquo;
               </p>
 
               <div className="flex items-center">
-                <img
+                <Image
+                width={200}
+                height={200}
                   src={item.imageUrl}
                   alt={item.name}
                   className="w-10 h-10 rounded-full object-cover"

@@ -6,12 +6,12 @@ import { Shield, Truck, Award, Package, Star, Clock } from "lucide-react";
 export default function WhyChooseUs() {
   const [isExpanded, setIsExpanded] = useState<Record<number, boolean>>({});
 
-  interface Reason {
-    id: number;
-    icon: JSX.Element;
-    title: string;
-    description: string;
-  }
+  // interface Reason {
+  //   id: number;
+  //   icon: JSX.Element;
+  //   title: string;
+  //   description: string;
+  // }
 
   interface IsExpandedState {
     [key: number]: boolean;
@@ -80,7 +80,7 @@ export default function WhyChooseUs() {
         </h2>
         <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
         <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-inter">
-          Nigeria's trusted provider of premium electrical wires and cables,
+          Nigeria&apos;s trusted provider of premium electrical wires and cables,
           delivering quality products nationwide with reliability and expertise.
         </p>
       </div>

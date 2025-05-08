@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
-interface HeaderProps {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
+// interface HeaderProps {
+//   darkMode: boolean;
+//   toggleDarkMode: () => void;
+// }
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -4,7 +4,6 @@ import FeaturedProducts from "@/components/featured";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/hero";
-// import ProductCategories from "@/components/productcategories";
 import ProductCategories from "@/components/productCategories";
 import Testimonials from "@/components/testimonials";
 import WhyChooseUs from "@/components/whyChooseUs";

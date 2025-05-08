@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ProductCategories() {
     const categories = [
       {
@@ -47,7 +49,9 @@ export default function ProductCategories() {
                 className={`${category.color} rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow group`}
               >
                 <div className="h-48 overflow-hidden">
-                  <img 
+                  <Image
+                    width={400}
+                    height={300} 
                     src={category.image} 
                     alt={category.name} 
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
