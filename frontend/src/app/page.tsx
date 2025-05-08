@@ -1,5 +1,5 @@
-'use client';
-import { motion } from 'framer-motion';
+"use client";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
         >
-          Powering your world, one wire at a time.
+          Connecting you with quality.
         </motion.p>
 
         <motion.div
