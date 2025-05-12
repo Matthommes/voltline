@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductCategories() {
     const categories = [
@@ -76,8 +77,9 @@ export default function ProductCategories() {
           </div>
   
           <div className="mt-12 text-center">
-            <a 
-              href="#" 
+            
+            <Link
+              href="/products" 
               className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
             >
               View All Products
@@ -85,7 +87,7 @@ export default function ProductCategories() {
                 <path d="M5 12h14"></path>
                 <path d="M12 5l7 7-7 7"></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

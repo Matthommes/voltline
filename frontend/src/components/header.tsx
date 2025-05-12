@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 
 // interface HeaderProps {
 //   darkMode: boolean;
@@ -21,57 +22,58 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-blue-600 dark:text-blue-400"
+            >
               <span className="font-bold">VOLT</span>
               <span className="text-yellow-500">LINE</span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="font-medium dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Home
-            </a>
-            <a
-              href="#products"
+            </Link>
+            <Link
+              href="/products"
               className="font-medium dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Products
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              href="/about"
               className="font-medium dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               About Us
-            </a>
-            <a
+            </Link>
+            <Link
               href="#testimonials"
               className="font-medium dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Testimonials
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/contact"
               className="font-medium dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Contact
-            </a>
+            </Link>
           </nav>
 
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
-            {/* Dark mode toggle */}
-
-            {/* Call to action button */}
-            <a
-              href="#contact"
+           
+            <Link
+              href="/quote"
               className="hidden md:block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
             >
               Get a Quote
-            </a>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -93,58 +95,58 @@ export default function Header() {
           <nav className="mt-4 py-4 border-t border-gray-200 dark:border-gray-700 md:hidden">
             <ul className="space-y-3">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#products"
+                <Link
+                  href="/products"
                   className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Products
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/about"
                   className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#testimonials"
                   className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Testimonials
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  href="/contact"
                   className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contact"
+                <Link
+                  href="/quote"
                   className="block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-medium text-center transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get a Quote
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
