@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Shield, Truck, Award, Package, Star, Clock } from "lucide-react";
+import Link from "next/link";
 
 export default function WhyChooseUs() {
   const [isExpanded, setIsExpanded] = useState<Record<number, boolean>>({});
@@ -80,8 +81,9 @@ export default function WhyChooseUs() {
         </h2>
         <div className="h-1 w-20 bg-blue-600 dark:bg-blue-400 mx-auto"></div>
         <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-inter">
-          Nigeria&apos;s trusted provider of premium electrical wires and cables,
-          delivering quality products nationwide with reliability and expertise.
+          Nigeria&apos;s trusted provider of premium electrical wires and
+          cables, delivering quality products nationwide with reliability and
+          expertise.
         </p>
       </div>
 
@@ -132,12 +134,18 @@ export default function WhyChooseUs() {
             quality electrical wiring solutions.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-white dark:bg-gray-200 text-blue-600 dark:text-blue-700 font-medium py-3 px-6 rounded-md hover:bg-blue-50 dark:hover:bg-gray-300 transition-colors duration-300 shadow-sm font-montserrat">
+            <Link
+              href="/products"
+              className="bg-white dark:bg-gray-200 text-blue-600 dark:text-blue-700 font-medium py-3 px-6 rounded-md hover:bg-blue-50 dark:hover:bg-gray-300 transition-colors duration-300 shadow-sm font-montserrat"
+            >
               Browse Products
-            </button>
-            <button className="bg-amber-600 dark:bg-amber-500 text-white font-medium py-3 px-6 rounded-md hover:bg-amber-700 dark:hover:bg-amber-600 transition-colors duration-300 shadow-sm font-montserrat">
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-amber-600 dark:bg-amber-500 text-white font-medium py-3 px-6 rounded-md hover:bg-amber-700 dark:hover:bg-amber-600 transition-colors duration-300 shadow-sm font-montserrat"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>

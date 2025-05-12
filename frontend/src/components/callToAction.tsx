@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function CallToAction() {
   return (
@@ -65,13 +66,13 @@ export default function CallToAction() {
 
                 {/* Primary CTA button */}
                 <div className="mt-8">
-                  <a
-                    href="#shop-now"
+                  <Link
+                    href="/products"
                     className="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md bg-amber-500 dark:bg-amber-600 text-white hover:bg-amber-600 dark:hover:bg-amber-700 transition-all duration-300 shadow-lg hover:shadow-xl font-montserrat"
                   >
                     Shop Now
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -107,12 +108,12 @@ export default function CallToAction() {
                         </div>
                       </div>
 
-                      <a
-                        href="#limited-time-offer"
+                      <Link
+                        href="/products"
                         className="mt-6 block w-full rounded-md bg-blue-600 dark:bg-blue-700 py-3 text-center font-medium text-white hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors duration-300 font-montserrat"
                       >
                         Claim Offer
-                      </a>
+                      </Link>
 
                       <p className="mt-4 text-xs text-center text-gray-500 dark:text-gray-400 font-inter">
                         *Limited time offer. Terms and conditions apply.
@@ -136,7 +137,7 @@ export default function CallToAction() {
           </p>
           <div className="mt-5">
             <a
-              href="#contact-us"
+              href="/contact"
               className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors duration-300 font-montserrat"
             >
               Contact our experts

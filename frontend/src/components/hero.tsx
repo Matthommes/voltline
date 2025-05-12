@@ -4,14 +4,14 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative dark:bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900">
-      <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+    <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900">
+      <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
       <div className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold dark:text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             Quality Electrical Wires for Every Nigerian Home & Business
           </h1>
-          <p className="text-xl md:text-2xl dark:text-blue-100 mb-8">
+          <p className="text-xl md:text-2xl text-blue-100 mb-8">
             Premium cables delivered nationwide with reliability and excellence
             as our standard.
           </p>
@@ -26,7 +26,7 @@ export default function Hero() {
 
             <Link
               href="/quote"
-              className="bg-white hover:bg-gray-100 cursor-pointer  text-blue-600 dark:bg-gray-800 dark:text-blue-300 dark:hover:bg-gray-700 px-8 py-4 rounded-md font-bold text-lg transition-colors flex items-center justify-center"
+              className="bg-white text-blue-600 hover:bg-gray-100 dark:bg-gray-700 dark:text-blue-200 dark:hover:bg-gray-600 px-8 py-4 rounded-md font-bold text-lg transition-colors flex items-center justify-center"
             >
               Get a Quote
             </Link>

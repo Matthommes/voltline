@@ -100,9 +100,9 @@ const ProductCard: React.FC<{ product: Product }> = ({ product }) => {
           <p className="font-bold text-gray-900 dark:text-white">
             ₦{product.price.toLocaleString()}
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-3 py-1 rounded transition-colors">
+          <Link href="/products" className="bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-3 py-1 rounded transition-colors">
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
