@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900 min-h-screen z-0">
+    <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900 z-0">
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
       <div className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl">
