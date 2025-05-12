@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900">
+    <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 dark:from-blue-900 dark:to-gray-900 min-h-screen z-0">
       <div className="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
       <div className="container mx-auto px-4 py-20 md:py-32">
         <div className="max-w-3xl">
@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/products"
-              className="bg-yellow-500 hover:bg-yellow-600 cursor-pointer text-gray-900 px-8 py-4 rounded-md font-bold text-lg transition-colors flex items-center justify-center"
+              className="bg-yellow-500 dark:bg-yellow-300 hover:bg-yellow-600 cursor-pointer text-gray-900 px-8 py-4 rounded-md font-bold text-lg transition-colors flex items-center justify-center"
             >
               Explore Products
               <ArrowRight className="ml-2 h-5 w-5" />

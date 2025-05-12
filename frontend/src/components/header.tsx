@@ -82,9 +82,9 @@ export default function Header() {
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
-                <X className="h-6 w-6 dark:bg-white" />
+                <X className="h-6 w-6 dark:text-white" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-6 w-6 dark:text-white" />
               )}
             </button>
           </div>
@@ -97,7 +97,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/"
-                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Home
@@ -106,7 +106,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/products"
-                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Products
@@ -115,7 +115,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   About Us
@@ -124,7 +124,7 @@ export default function Header() {
               <li>
                 <Link
                   href="#testimonials"
-                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Testimonials
@@ -133,7 +133,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/contact"
-                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  className="block font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors dark:text-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Contact
